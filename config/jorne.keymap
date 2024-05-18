@@ -72,12 +72,12 @@
                 };
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
-// | RST | BLDR |     |     |     |     |BTCLA|   |     |     |     |     |     | BLDR | RST |
-//       | BTCLR| BT0 | BT1 | BT2 | BT3 | BT4 |   | BT4 | BT3 | BT2 | BT1 | BT0 | BTCLR|
-//       | LED+ | LED-|LED_M|LEDS+|LEDS-|     |   |     |     |     |     |     |      |
-//                          |     |     |     |   |     |     |     |
+// | RST | BLDR |     |     |     |     |SFTOFF|   |SFTOFF|     |     |     |     | BLDR | RST |
+//       | BTCLR| BT0 | BT1 | BT2 | BT3 | BT4 |     | BT4 | BT3 | BT2 | BT1 | BT0 | BTCLR|
+//       | LED+ | LED-|LED_M|LEDS+|LEDS-|     |     |     |     |     |     |     |      |
+//                          |     |     |     |     |     |     |     |
                         bindings = <
-   &sys_reset &bootloader  &none        &none        &none        &none        &bt BT_CLR_ALL &none        &none        &none        &none        &none         &bootloader &sys_reset
+   &sys_reset &bootloader  &none        &none        &none        &none        &soft_off      &soft_off        &none        &none        &none        &none         &bootloader &sys_reset
           &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0  &bt BT_CLR
           &rgb_ug RGB_ON   &rgb_ug RGB_OFF   &rgb_ug RGB_EFF   &rgb_ug RGB_SPI   &rgb_ug RGB_SPD        &none              &none        &none        &none        &none        &none         &none
                                                                     &trans &none &trans   &trans &none &trans
