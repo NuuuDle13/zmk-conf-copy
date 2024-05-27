@@ -17,8 +17,8 @@
 &led_strip {
     chain-length = <28>;
 
-    // chain-length = <27>;
-    // 21 backlight + 6 glowlight
+    // chain-length = <28>;
+    // 22 backlight + 6 glowlight
 };
 
 #define DEF 0
