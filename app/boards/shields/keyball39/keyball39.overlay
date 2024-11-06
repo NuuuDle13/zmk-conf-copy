@@ -1,0 +1,24 @@
+/ {
+    keyball39 {
+        compatible = "zmk,keyboard";
+
+        /* Key matrix layout */
+        keymap {
+            label = "Keyball39 Layout";
+            bindings = <
+                &kp A  &kp B  &kp C  &kp D  &kp E  &none   &kp F  &kp G  &kp H  &kp I  &kp J
+                &kp K  &kp L  &kp M  &kp N  &kp O  &none   &kp P  &kp Q  &kp R  &kp S  &kp T
+                &kp U  &kp V  &kp W  &kp X  &kp Y  &none   &kp Z  &kp 1  &kp 2  &kp 3  &kp 4
+                &kp 5  &kp 6  &kp 7  &kp 8  &kp 9  &kp 0   &kp Enter &kp Space &kp Backspace
+            >;
+        };
+
+        pmw3360: pmw3360@0 {
+            compatible = "pixart,pmw3360";
+            spi = <&spi1>;
+            cs-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
+            irq-gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
+            label = "PMW3360";
+        };
+    };
+};
